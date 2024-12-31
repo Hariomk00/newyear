@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: #1f242d;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background: royalblue;
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    position: fixed;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav h3 {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+}
+
+nav .sec2 {
+    display: flex;
+    gap: 2rem
+}
+
+.pages {
+    width: 100%;
+    height: calc(100vh-10vh);
+}
+
+#home,
+#services,
+#office {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    padding-top: 10vh;
+}
+
+#home {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 3rem;
+    margin-bottom: 1.8rem;
+    margin-top: 1rem;
+
+    color: orange;
+}
+
+#home p {
+    font-size: 1.3rem;
+    width: 80%;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+    line-height: 2.5rem;
+}
+
+#home .imgContainer {
+    width: 300px;
+    height: 300px;
+    background-image: url('imgs/picu.png');
+    object-fit: cover;
+    background-size: 100% 160%;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+
+    border-radius: 100%;
+    border: 4px solid;
+    animation: auroraPulse 3s infinite alternate ease-in-out, borderColorChange 5s infinite linear, boxShadowColorChange 5s infinite linear;
+
+    box-shadow:
+        rgba(25, 25, 112, 0.8) 0px 20px 50px,
+        rgba(138, 43, 226, 0.5) 0px 0px 30px 5px,
+        rgba(255, 255, 255, 0.3) 0px 0px 10px 2px;
+
+    margin-bottom: 2rem;
+}
+
+@keyframes auroraPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: rgba(138, 43, 226, 0.7);
+    }
+
+    25% {
+        border-color: rgba(0, 191, 255, 0.7);
+    }
+
+    50% {
+        border-color: rgba(60, 179, 113, 0.7);
+    }
+
+    75% {
+        border-color: rgba(255, 215, 0, 0.7);
+    }
+
+    100% {
+        border-color: rgba(138, 43, 226, 0.7);
+    }
+}
+
+@keyframes boxShadowColorChange {
+    0% {
+        box-shadow:
+            rgba(138, 43, 226, 0.7) 0px 20px 50px,
+            rgba(0, 191, 255, 0.5) 0px 0px 30px 5px,
+            rgba(255, 255, 255, 0.3) 0px 0px 10px 2px;
+    }
+
+    25% {
+        box-shadow:
+            rgba(0, 191, 255, 0.7) 0px 20px 50px,
+            rgba(60, 179, 113, 0.5) 0px 0px 30px 5px,
+            rgba(255, 255, 255, 0.4) 0px 0px 15px 3px;
+    }
+
+    50% {
+        box-shadow:
+            rgba(60, 179, 113, 0.7) 0px 20px 50px,
+            rgba(255, 215, 0, 0.5) 0px 0px 30px 5px,
+            rgba(255, 255, 255, 0.5) 0px 0px 20px 4px;
+    }
+
+    75% {
+        box-shadow:
+            rgba(255, 215, 0, 0.7) 0px 20px 50px,
+            rgba(138, 43, 226, 0.5) 0px 0px 30px 5px,
+            rgba(255, 255, 255, 0.4) 0px 0px 15px 3px;
+    }
+
+    100% {
+        box-shadow:
+            rgba(138, 43, 226, 0.7) 0px 20px 50px,
+            rgba(0, 191, 255, 0.5) 0px 0px 30px 5px,
+            rgba(255, 255, 255, 0.3) 0px 0px 10px 2px;
+    }
+}
+
+#home button {
+    background: greenyellow;
+    color: #000;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    border-color: #fff 1px inset;
+
+    margin-bottom: 1.8rem;
+}
+
+#home .social-icons {
+    font-size: 3rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#home .social-icons a i {
+    color: greenyellow;
+}
+
+/* Services Section */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+#services h1 {
+    margin-bottom: 1.8rem;
+    font-size: 3rem;
+}
+
+#services .board {
+    width: 80%;
+    display: flex;
+    height: fit-content;
+    margin-top: 1.8rem;
+    /* border: 2px solid #fff; */
+}
+
+#services .board .sec1 {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 2rem;
+}
+
+#services .board .sec1 li {
+    list-style: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: greenyellow;
+    cursor: pointer;
+}
+
+#services .board .sec1 li i {
+    margin-right: .5rem;
+    color: bisque;
+}
+
+#services .board .sec1 li:hover {
+    margin-left: 1rem;
+    transition: 0.5s;
+    color: #fff;
+}
+
+
+#services .board .sec2 {
+    width: 50%;
+    height: 450px;
+    background-image: url('imgs/handsign3.png');
+    object-fit: cover;
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Office Section */
+
+#office {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding-bottom: 1.8rem;
+}
+
+#office .image-gallery {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.8rem;
+    gap: 2rem;
+}
+
+#office .image-gallery img {
+    width: 90%;
+    height: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+#office .image-gallery .image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 300px;
+    /* background-color: gray; */
+
+    border: 2px ridge #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#office .image-gallery .image-label {
+    text-decoration: none;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 2px ridge #fff;
+}
+
+#office .image-gallery .image-label a {
+    text-decoration: none;
+    color: #fff;
+    font-size: larger;
+    font-weight: 600;
+}
+
+#address {
+    height: 45vh;
+    width: 100%;
+    background-color:#1f242d;
+
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+
+#address .sec1,
+#address .sec2,
+#address .sec3 {
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    height: 100%;
+}
+
+#address .sec1{
+    line-height: 1.8rem;
+}
+
+#address h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+#address .sec2 {
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    align-items: center;
+    height: 100%;
+
+    line-height: 2rem;
+}
+
+#address .sec2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#address .sec3 {
+    background-color: yellow;
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+#address .sec3 iframe {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+#address .sec3:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1rem;
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav .sec1 {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    nav .sec2.active {
+        display: flex;
+    }
+
+    #home .imgContainer{
+        width: 250px;
+        height: 250px;
+    }
+
+    #home p {
+        width: 95%;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+    }
+
+    #home h2 {
+        font-size: 2.2rem;
+    }
+
+    #home button {
+        font-size: 1.4rem;
+    }
+
+    #home .social-icons {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    #services .board {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    #services .board .sec1 {
+        width: 100%;
+        height: auto;
+    }
+
+    #services h2{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    #services .board .sec2 {
+        width: 100%;
+        height: 300px;
+        background-size: contain;
+        display: none;
+    }
+
+    #services h1 {
+        font-size: 2rem;
+    }
+
+    #services .board .sec1 li {
+        font-size: 1.1rem;
+    }
+
+    #office .image-gallery .image-item {
+        width: 90%;
+    }
+
+    #address {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #address .sec1,
+    #address .sec2 {
+        align-items: center;
+        text-align: center;
+    }
+
+    #address .sec3 {
+        width: 100%;
+        height: 220px;
+    }
+
+    #address .sec3:hover {
+        scale: 1;
+    }
+}
+
+/* chatbot css */
+#floatingChatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Icon size */
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatIcon img {
+    width: 100%;
+    height: 100%;
+}
+
+#chatBody {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+#chatHeader {
+    position: relative;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#closeChat {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+#chatBody textarea {
+    width: 100%;
+    height: 150px; /* Adjusted height to fit in container */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+#chatBody button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#chatBody button:hover {
+    background-color: #0056b3;
+}
