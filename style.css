@@ -581,3 +581,24 @@ nav .sec2 {
 #chatBody button:hover {
     background-color: #0056b3;
 }
+.swiper {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .swiper-slide {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0; /* Background color */
+    border-radius: 10px; /* Optional rounded corners */
+    overflow: hidden;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; Ensures the image fills the box while maintaining aspect ratio
+  }
